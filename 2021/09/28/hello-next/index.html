@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"github.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="NexT主题中的一些插件和配置">
+  <meta name="description" content="NexT主题中的一些配置和第三方插件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NexT中的一些插件">
+<meta property="og:title" content="NexT主题配置">
 <meta property="og:url" content="https://github.com/Riqzz/riqzz.github.io/2021/09/28/hello-next/index.html">
-<meta property="og:site_name" content="Richou Blog">
-<meta property="og:description" content="NexT主题中的一些插件和配置">
+<meta property="og:site_name" content="R&#39;log">
+<meta property="og:description" content="NexT主题中的一些配置和第三方插件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-28T09:54:36.638Z">
-<meta property="article:modified_time" content="2021-09-28T11:41:00.617Z">
+<meta property="article:modified_time" content="2021-09-29T10:16:48.004Z">
 <meta property="article:author" content="Uzuki Shimako">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="NexT">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>NexT中的一些插件 | Richou Blog</title>
+  <title>NexT主题配置 | R'log</title>
   
 
 
@@ -98,9 +98,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Richou Blog</h1>
+      <h1 class="site-title">R'log</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">YOUKOSO!!! Shimako no Blog e</p>
   </div>
 
   <div class="site-nav-right">
@@ -171,11 +172,11 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Richou Blog">
+      <meta itemprop="name" content="R'log">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          NexT中的一些插件
+          NexT主题配置
         </h1>
 
         <div class="post-meta">
@@ -184,13 +185,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-09-28 17:54:36 / 修改时间：19:41:00" itemprop="dateCreated datePublished" datetime="2021-09-28T17:54:36+08:00">2021-09-28</time>
+              <time title="创建时间：2021-09-28 17:54:36" itemprop="dateCreated datePublished" datetime="2021-09-28T17:54:36+08:00">2021-09-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-29 18:16:48" itemprop="dateModified" datetime="2021-09-29T18:16:48+08:00">2021-09-29</time>
+              </span>
 
           
-            <div class="post-description">NexT主题中的一些插件和配置</div>
+            <div class="post-description">NexT主题中的一些配置和第三方插件</div>
 
         </div>
       </header>
@@ -201,7 +208,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="数学插件">数学插件</h3>
+        <p>NexT主题的安装请参考这篇文章 <a href="/2021/09/28/hello-hexo/" title="使用Hexo搭建Github博客">使用Hexo搭建Github博客</a></p>
+<h3 id="修改目录">修改目录</h3>
+<p>原始的目录中只有<code>主页</code>和<code>归档</code>两个项目。在配置文件<code>_config.yml</code>中可以加入新的项目。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/hexo$ vim themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+<p>找到<code>menu</code>，去掉需要的项目前面的注释。比如这里的<code>tags</code>和<code>categories</code>，格式为<code>名称: 路径 || 图标</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  #about: /about/ || fa fa-user</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  #schedule: /schedule/ || fa fa-calendar</span><br><span class="line">  #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: /404/ || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+<p>然后创建<code>tags</code>和<code>categories</code>这两个页面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~/hexo$ hexo new page &#x27;tags&#x27;</span><br><span class="line">~/hexo$ hexo new page &#x27;categories&#x27;</span><br></pre></td></tr></table></figure>
+<p>会在<code>source/</code>中多出两个目录，各包含一个<code>index.md</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">soutce</span><br><span class="line">├── _posts</span><br><span class="line">│   ├── ...</span><br><span class="line">│   ├── article.md</span><br><span class="line">│   └── ...</span><br><span class="line">├── categories</span><br><span class="line">│   └── index.md</span><br><span class="line">└── tags</span><br><span class="line">    └── index.md</span><br></pre></td></tr></table></figure>
+<p>在两个<code>index.md</code>中指明类型，在抬头中加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2021-09-28 19:08:20</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2021-09-28 19:08:20</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>使用时需要在文章的抬头中加入相应的条目</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">title: 文章题目</span><br><span class="line">tags:</span><br><span class="line">  - tag_1</span><br><span class="line">  - tag_2</span><br><span class="line">  - tag_3</span><br><span class="line">categories:</span><br><span class="line">  - class</span><br><span class="line">  - [class, sub-class]</span><br><span class="line">  - [class, sub-class, sub-sub-class]</span><br></pre></td></tr></table></figure>
+<p><em>PS: 可以自定义menu，什么时候用到了再更新...</em> <span class="emoji" alias="tired_face" style="" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f62b.png?v8">&#x1f62b;</span></p>
+<h3 id="数学插件">数学插件</h3>
 <p>重装渲染器，<a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/MATH.md">文档</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked</span><br><span class="line">npm install hexo-renderer-pandoc</span><br></pre></td></tr></table></figure>
 <p>然后在 <code>next/_config.yml</code> 中将 <code>mathjax</code> 的 <code>enable</code> 打开</p>
@@ -244,10 +266,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/09/28/hello-hexo/" rel="prev" title="使用Hexo搭建github博客">
-      <i class="fa fa-chevron-left"></i> 使用Hexo搭建github博客
+    <a href="/2021/09/28/hello-hexo/" rel="prev" title="使用Hexo搭建Github博客">
+      <i class="fa fa-chevron-left"></i> 使用Hexo搭建Github博客
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/29/windows-terminal-git-bash/" rel="next" title="在 Windows Terminal 中添加 Git Bash">
+      在 Windows Terminal 中添加 Git Bash <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -306,7 +331,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E6%8F%92%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">数学插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#emoji-%E6%8F%92%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">Emoji 插件</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">修改目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E6%8F%92%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">数学插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#emoji-%E6%8F%92%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">Emoji 插件</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -320,14 +345,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
